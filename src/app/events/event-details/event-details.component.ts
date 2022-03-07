@@ -1,3 +1,4 @@
+import { IEvent } from './../shared/event.model';
 import { EventService } from './../shared/events.service';
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
@@ -14,7 +15,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 
 export class EventDetailsComponent {
-  event: any
+  event: IEvent | undefined
   constructor(private eventService: EventService, private route: ActivatedRoute) {
 
   }

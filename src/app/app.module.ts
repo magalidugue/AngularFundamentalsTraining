@@ -25,6 +25,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { EventsAppComponent } from './event-app.component';
 
 import { EventRouteActivator } from './events/event-details/event-route-activator.service';
+import { AuthService } from './user/auth.service';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,7 @@ import { EventRouteActivator } from './events/event-details/event-route-activato
     RouterModule.forRoot(appRoutes)
 
   ],
-  providers: [EventService, ToastrService, EventRouteActivator,
+  providers: [EventService, AuthService, ToastrService, EventRouteActivator,
     {
       provide: 'canDeactivateCreateEvent',
       useValue: checkDirtySate
