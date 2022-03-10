@@ -1,3 +1,4 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProfileComponent } from './user/profile.component';
 import { EventsListResolver } from './events/events-list-resolver.service';
 import { Error404Component } from './errors/404.component';
@@ -38,10 +39,13 @@ import { AuthService } from './user/auth.service';
     Error404Component,
 
 
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(appRoutes)
 
   ],
