@@ -1,4 +1,6 @@
-import { Component } from '@angular/core'
+import { Component, OnInit } from '@angular/core'
+import { FormControl, FormGroup } from '@angular/forms';
+
 
 @Component({
   selector: 'profile',
@@ -10,4 +12,13 @@ import { Component } from '@angular/core'
 })
 export class ProfileComponent {
 
-}
+
+    firstName = new FormControl()
+    lastname = new FormControl()
+      profileForm = new FormGroup({
+      firstName: this.firstName,
+      lastName: this.lastname
+    })
+  }
+
+

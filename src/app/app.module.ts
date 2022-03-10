@@ -11,7 +11,7 @@ import {
   EventDetailsComponent,
   EventsThumbnail,
   EventService,
-  EventsListComponent
+  EventsListComponent,
 
 } from './events/index'
 
