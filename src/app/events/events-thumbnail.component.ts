@@ -13,5 +13,6 @@ import { Component, Input } from '@angular/core';
   ]
 })
 export class EventsThumbnail {
-  @Input() event: IEvent | undefined
+  @Input()
+  event!: IEvent;
 }

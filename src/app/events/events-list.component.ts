@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './events-list.component.html'
 })
 export class EventsListComponent {
-  events: IEvent[] | undefined
+  events!: IEvent[]
 
   constructor(private eventService: EventService, private toastr: ToastrService, private route: ActivatedRoute) {
 
