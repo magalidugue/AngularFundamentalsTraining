@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { Form, FormControl, FormGroup, Validator, Validators } from '@angular/forms';
+import { EventEmitter } from '@angular/core';
 import { Isession } from '../shared';
 
 
@@ -11,6 +12,7 @@ import { Isession } from '../shared';
 })
 
 export class CreateSessionComponent  implements OnInit{
+  @Output() saveNewSession = new EventEmitter()
   newSessionForm!: FormGroup
   name!: FormControl
   presenter!: FormControl
@@ -36,7 +38,17 @@ export class CreateSessionComponent  implements OnInit{
   }
 
   saveSession(formValues : Isession) {
-    console.log(formValues)
+    let session : Isession = {
+      id: 1,
+      name: formValues.name,
+      duration: +formValues.duration,
+      level: formValues.level,
+      presenter: formValues.presenter,
+      abstract: formValues.abstract,
+      voters: []
+    }
+
+    this.saveNewSession.emit(session)
   }
 
 

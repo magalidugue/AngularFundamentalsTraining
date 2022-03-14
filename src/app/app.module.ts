@@ -1,3 +1,4 @@
+import { SessionListComponent } from './events/event-details/session-list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CreateSessionComponent } from './events/event-details/create-session.component';
 import { ProfileComponent } from './user/profile.component';
@@ -38,7 +39,8 @@ import { AuthService } from './user/auth.service';
     EventDetailsComponent,
     CreateEventComponent,
     Error404Component,
-    CreateSessionComponent
+    CreateSessionComponent,
+    SessionListComponent
 
 
 

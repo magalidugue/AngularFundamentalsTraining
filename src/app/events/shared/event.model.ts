@@ -12,7 +12,7 @@ export interface IEvent {
     country: string
   },
   onlineUrl?: string
-  sessions: Isession[]
+  session: Isession[]
 }
 
 export interface Isession {
